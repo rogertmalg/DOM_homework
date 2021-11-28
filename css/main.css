@@ -1,0 +1,20 @@
+body {
+    font-family: Palatino;
+  }
+  
+  #watchlist {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  
+  }
+  
+  .single-item {
+    text-align: center;
+    background-color: lavender;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+  }
