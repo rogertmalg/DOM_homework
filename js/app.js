@@ -2,6 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('JavaScript loaded');
 
     document.querySelector('#watchlist-form').addEventListener('submit', handleFormSubmit);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.innerHTML = "Delete all";
+    deleteButton.type = 'button';
+    const newForm = document.querySelector('#watchlist-form');
+    newForm.appendChild(deleteButton);
+    deleteButton.addEventListener('click', handleButtonClick);
   })
 
   const handleFormSubmit = function (event) {
@@ -18,3 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     list.appendChild(newListItem);
     this.reset()
   };
+
+  const handleButtonClick = function (event) {
+    document.querySelector('#watchlist').textContent = "";
+    }
